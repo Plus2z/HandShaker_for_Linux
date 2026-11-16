@@ -1,0 +1,20 @@
+[package]
+name = "handshaker-fuse"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+
+[[bin]]
+name = "handshaker-mount"
+path = "src/main.rs"
+
+[dependencies]
+anyhow.workspace = true
+clap.workspace = true
+fuser.workspace = true
+handshaker-proto = { path = "../handshaker-proto" }
+tokio = { workspace = true, features = ["signal"] }
+tracing.workspace = true
+tracing-subscriber.workspace = true
+uuid.workspace = true

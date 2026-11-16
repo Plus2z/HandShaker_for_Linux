@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=HandShaker for Linux
+GenericName=Android File & Media Manager
+Comment=Transfer files, photos, videos, music, and clipboard with your Android phone over USB AOA or Wi-Fi
+Exec=handshaker-linux %U
+Icon=handshaker-linux
+Terminal=false
+Categories=Network;FileTransfer;
+Keywords=Android;Smartisan;HandShaker;USB;AOA;Wi-Fi;Clipboard;Media;
+StartupNotify=true
+StartupWMClass=handshaker-desktop

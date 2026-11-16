@@ -1,0 +1,30 @@
+# HandShaker for Linux udev rules (non-root USB AOA access via logind uaccess)
+# Install to: /etc/udev/rules.d/70-handshaker.rules
+# Then reload: sudo udevadm control --reload-rules && sudo udevadm trigger
+
+# Google Android Open Accessory (AOA) & AOA+ADB interface IDs
+SUBSYSTEM=="usb", ATTR{idVendor}=="18d1", ATTR{idProduct}=="2d00", TAG+="uaccess"
+SUBSYSTEM=="usb", ATTR{idVendor}=="18d1", ATTR{idProduct}=="2d01", TAG+="uaccess"
+SUBSYSTEM=="usb", ATTR{idVendor}=="18d1", ATTR{idProduct}=="2d02", TAG+="uaccess"
+SUBSYSTEM=="usb", ATTR{idVendor}=="18d1", ATTR{idProduct}=="2d03", TAG+="uaccess"
+SUBSYSTEM=="usb", ATTR{idVendor}=="18d1", ATTR{idProduct}=="2d04", TAG+="uaccess"
+SUBSYSTEM=="usb", ATTR{idVendor}=="18d1", ATTR{idProduct}=="2d05", TAG+="uaccess"
+
+# Pre-switch MTP/ADB Android phone VIDs so non-root users can send AOA control transfers 51/52/53
+# vivo / iQOO
+SUBSYSTEM=="usb", ATTR{idVendor}=="2d95", TAG+="uaccess"
+# Google
+SUBSYSTEM=="usb", ATTR{idVendor}=="18d1", TAG+="uaccess"
+# Xiaomi / Redmi / POCO
+SUBSYSTEM=="usb", ATTR{idVendor}=="2717", TAG+="uaccess"
+# Samsung
+SUBSYSTEM=="usb", ATTR{idVendor}=="04e8", TAG+="uaccess"
+# OPPO / Realme / OnePlus
+SUBSYSTEM=="usb", ATTR{idVendor}=="22d9", TAG+="uaccess"
+SUBSYSTEM=="usb", ATTR{idVendor}=="2a70", TAG+="uaccess"
+# Smartisan
+SUBSYSTEM=="usb", ATTR{idVendor}=="29a9", TAG+="uaccess"
+# Huawei / Honor
+SUBSYSTEM=="usb", ATTR{idVendor}=="12d1", TAG+="uaccess"
+# Nothing
+SUBSYSTEM=="usb", ATTR{idVendor}=="2b4c", TAG+="uaccess"

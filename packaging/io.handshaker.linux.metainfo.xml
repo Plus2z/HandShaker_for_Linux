@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>io.handshaker.linux</id>
+  <metadata_license>MIT</metadata_license>
+  <project_license>MIT</project_license>
+  <name>HandShaker for Linux</name>
+  <summary>Open-source Linux client for the Smartisan HandShaker Android protocol</summary>
+  <url type="homepage">https://github.com/Plus2z/HandShaker_for_Linux</url>
+  <developer id="io.handshaker.linux">
+    <name>HandShaker for Linux Contributors</name>
+  </developer>
+  <description>
+    <p>
+      Manage files, photos, videos, music, and synced clipboard items on an Android phone
+      running the Smartisan HandShaker APK over Wi-Fi (mDNS) or direct USB Open Accessory (AOA),
+      with native Wayland/Hyprland ergonomics, CLI tools, and optional FUSE filesystem mounting.
+    </p>
+  </description>
+  <launchable type="desktop-id">handshaker-linux.desktop</launchable>
+  <provides>
+    <binary>handshaker-desktop</binary>
+    <binary>handshaker-linux</binary>
+    <binary>hs-cli</binary>
+    <binary>handshaker-mount</binary>
+  </provides>
+  <content_rating type="oars-1.1" />
+</component>
